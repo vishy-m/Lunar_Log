@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Date</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+            background: #333;
+            text-align: center;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #555;
+            color: white;
+        }
+        button {
+            border: none;
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Select Date for Certificate</h1>
+        <form method="post" action="/get-certificate">
+            <input type="hidden" name="name" value="{{ name }}">
+            <select name="date" required>
+                {% for session in sessions %}
+                <option value="{{ session.date }}">{{ session.date }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit">Get Certificate</button>
+        </form>
+    </div>
+</body>
+</html>

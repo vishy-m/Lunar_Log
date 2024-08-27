@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lunar Log</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/get-certificate">Get Certificate</a></li>
+                <li><a href="/add-session">Log Hours</a></li>
+                <li><a href="/admin">Manage Space</a></li>
+                <li><a href="/opportunities">Opportunities</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1 class="title nanum-myeongjo-regular">The Lunar Log</h1>
+            <p class="subtitle nanum-myeongjo-regular">
+                Antonio Canova's statue The Three Graces is a Neoclassical sculpture, in marble, of the mythological three Charites,
+                daughters of Zeus – identified on some engravings of the statue as, from left to right, Euphrosyne, Aglaea and Thalia –
+            </p>
+        </section>
+        <section class="content">
+            <form action="/select-date" method="post">
+                <label for="name">Enter your name:</label>
+                <input type="text" id="name" name="name" required>
+                <button type="submit">Get Certificate</button>
+            </form>
+            <form action="/add-session" method="post">
+                <label for="volunteer_name">Volunteer Name:</label>
+                <input type="text" id="volunteer_name" name="volunteer_name" required>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+                <label for="start_time">Start Time:</label>
+                <input type="time" id="start_time" name="start_time" required>
+                <label for="end_time">End Time:</label>
+                <input type="time" id="end_time" name="end_time">
+                <button type="submit">Log Hours</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
